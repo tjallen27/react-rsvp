@@ -13,6 +13,10 @@ class App extends Component {
       {
         name: 'Nic',
         isConfirmed: true
+      },
+      {
+        name: 'Matt K',
+        isConfirmed: true
       }
     ]
   }
@@ -56,7 +60,7 @@ class App extends Component {
             </tbody>
           </table>
 
-          <GuestList />
+          <GuestList guests={this.state.guests} />
         </div>
       </div>
     );
