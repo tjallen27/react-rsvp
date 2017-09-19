@@ -5,14 +5,65 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <div class="App">
+        <header>
+          <h1>RSVP</h1>
+          <p>A Treehouse App</p>
+          <form>
+              <input type="text" value="Safia" placeholder="Invite Someone" />
+              <button type="submit" name="submit" value="submit">Submit</button>
+          </form>
+        </header>
+        <div class="main">
+          <div>
+            <h2>Invitees</h2>
+            <label>
+              <input type="checkbox" />
+            </label>
+          </div>
+          <table class="counter">
+            <tbody>
+              <tr>
+                <td>Attending:</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Unconfirmed:</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Total:</td>
+                <td>3</td>
+              </tr>
+            </tbody>
+          </table>
+          <ul>
+            <li class="pending"><span>Safia</span></li>
+            <li class="responded"><span>Iver</span>
+              <label>
+                <input type="checkbox" checked />
+              </label>
+              <button>edit</button>
+              <button>remove</button>
+            </li>
+            <li class="responded">
+              <span>Corrina</span>
+              <label>
+                <input type="checkbox" checked />
+              </label>
+              <button>edit</button>
+              <button>remove</button>
+            </li>
+            <li>
+              <span>Joel</span>
+              <label>
+                <input type="checkbox" />
+              </label>
+              <button>edit</button>
+              <button>remove</button>
+            </li>
+          </ul>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
       </div>
     );
   }
