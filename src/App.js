@@ -21,6 +21,8 @@ class App extends Component {
     ]
   }
 
+  toggleConfirmation = () => {}
+
   getTotalInvited  = () => this.state.guests.length;
   // getAttendingGuests = () =>
   // getUnconfirmedGuests = () =>
