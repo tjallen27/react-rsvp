@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import GuestList from './GuestList';
+import Counter from './Counter';
 
 class App extends Component {
 
@@ -93,6 +94,7 @@ class App extends Component {
   // getUnconfirmedGuests = () =>
 
   render() {
+    const totalInvited = this.getTotalInvited();
     return (
       <div className="App">
         <header>
@@ -120,22 +122,8 @@ class App extends Component {
               checked={this.state.isFiltered} />
             </label>
           </div>
-          <table className="counter">
-            <tbody>
-              <tr>
-                <td>Attending:</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>Unconfirmed:</td>
-                <td>1</td>
-              </tr>
-              <tr>
-                <td>Total:</td>
-                <td>3</td>
-              </tr>
-            </tbody>
-          </table>
+          <Counter
+            totalInvited={totalInvited}/>
 
           <GuestList
           guests={this.state.guests}
